@@ -25,7 +25,7 @@ exports.run = async (client, message, args) => {
     }
 
     const idmec = args[0].replace(/[\\<>@!]/g, '');
-    const mec = message.guild.mecs.cache.get(idmec);
+    const mec = message.guild.members.cache.get(idmec);
 
     if (!mec) {
         return message.channel.send("Utilisateur non trouvé. Veuillez saisir une ID ou une mention valide.");
